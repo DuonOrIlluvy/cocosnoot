@@ -1,8 +1,15 @@
-// Should produce a parser error because a comma is missing.
 
 #include "civic.h"
 
 export int main() {
+    // It should say "error: Array expression has wrong dimensions", though
+    // that won't happen if you implemented the "challenge" in section 9 of the language manual:
+    /*
+        The obvious extension that supports the initialisation of a multi-
+        dimensional array by an array value of lower dimensionality through replication along the outer
+        dimensions is not required, but could be taken as a challenge.
+    */
+    // Though it should still error out since there are 8 elements in initializer while first dimension length of a is 4
     int[4, 2] a = [0, 1, 2, 3, 4, 5, 6, 7];
     return 0;
 }

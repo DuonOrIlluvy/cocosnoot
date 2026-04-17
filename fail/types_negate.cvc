@@ -1,6 +1,7 @@
 #include "civic.h"
 
 export int main() {
+    // error: Wrong not type, expected bool but got int
     int a = !0;
     return 0;
 }

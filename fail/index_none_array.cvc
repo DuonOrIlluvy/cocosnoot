@@ -1,5 +1,6 @@
 export int main() {
 	int a = 5;
+    // Parsing this with the reference compiler results in Segmentation fault.
     int b = a[2];
 	return 0;
 }

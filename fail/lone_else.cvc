@@ -1,8 +1,7 @@
-// Should produce a type checking error because binop types should match.
-
 #include "civic.h"
 
 export int main() {
+    // Syntax error!
     else {}
     return 0;
 }

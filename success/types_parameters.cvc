@@ -1,3 +1,4 @@
+// Expected output: (Nothing)
 #include "civic.h"
 
 int kaas(float a) {

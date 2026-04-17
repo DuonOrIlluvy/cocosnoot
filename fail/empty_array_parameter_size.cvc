@@ -1,7 +1,7 @@
 // Should produce an error because an array is dimensionless.
 
 #include "civic.h"
-
+// Syntax error!
 void fill_matrix(float[] matrix) {
 	for(int i = 0, n)
 		for(int j = 0, m)

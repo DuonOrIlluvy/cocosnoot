@@ -1,5 +1,5 @@
 // For-loop check should be evaluated once!
-
+// Expected output: 000001
 #include "civic.h"
 
 int a = 0;

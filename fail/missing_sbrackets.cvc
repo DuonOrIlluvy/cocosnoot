@@ -1,4 +1,7 @@
+#include "civic.h"
+
 export int main() {
-    int [3] = 1, 1, 1;
+    // Syntax error!
+    float[5] a = 4, 5, 7, 8, 9;
     return 0;
 }

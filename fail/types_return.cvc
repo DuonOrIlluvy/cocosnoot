@@ -1,7 +1,8 @@
 // Should give a type checking error because a int function cannot return float.
 
 int fun() {
+    // error: Wrong return type, expected int but got float
     return 6.0;
 }
-
+// error: Function main has not returned and is non-void function
 export int main() {}

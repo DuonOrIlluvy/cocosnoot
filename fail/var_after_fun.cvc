@@ -6,7 +6,7 @@ export int main() {
     void kaas() {
         printInt(6);
     }
-
+    // Syntax error! ... unless you implement C99 style syntax
     int a = 0;
 
     return 0;

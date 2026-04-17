@@ -1,3 +1,4 @@
+// Expected output: 6.000000
 #include "civic.h"
 
 float kaas() {

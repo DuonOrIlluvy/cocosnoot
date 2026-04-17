@@ -3,6 +3,8 @@
 #include "civic.h"
 
 export int main() {
-    6.0 % 5.0;
+    // error: only int operands are allowed for modulus, left operand has type
+    // float and right operand has type float
+    float mod = 6.0 % 5.0;
     return 0;
 }

@@ -1,0 +1,8 @@
+// error: Function main has not returned and is non-void function
+export int main() {
+    if (true) {
+        return 1;
+    } else {
+        main();
+    }
+}

@@ -1,3 +1,4 @@
+// Expected output: (Nothing)
 int a = 5;
 
 export int main() {

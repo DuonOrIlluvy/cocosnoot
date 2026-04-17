@@ -1,6 +1,7 @@
 #include "civic.h"
 
 export int main() {
+    // error: Wrong condition type, expected bool but got int
     if (5) {
         printInt(1);
     }

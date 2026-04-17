@@ -1,5 +1,6 @@
+// error: Unable to find 'a' in any of the modules
 extern int a;
-extern int[a] b;
+extern int[c] b;
 
 export int main() {
     return 0;

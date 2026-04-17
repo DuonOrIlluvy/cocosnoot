@@ -4,6 +4,7 @@
 
 export int main() {
     int a = 0;
+    // error: Variable 'a' is already declared
     float a = 5.0;
     return 0;
 }

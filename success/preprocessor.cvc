@@ -1,3 +1,4 @@
+// Expected output: 100
 #include "civic.h"
 #define N 100
 

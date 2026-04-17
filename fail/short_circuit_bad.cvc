@@ -3,6 +3,7 @@
 int rv = 0;
 
 export int main() {
+    // error: Function 'kaas' has not been declared yet
     if (false && kaas()) {}
     return rv;
 }

@@ -1,8 +1,8 @@
-// Should produce a type checking error for mixing types in an array.
-
 #include "civic.h"
 
 export int main() {
+    // error: Wrong assignment type, expected int but got float
     int[4] a = [1, 2, 3.0, 4];
+    //                ^~~
     return 0;
 }

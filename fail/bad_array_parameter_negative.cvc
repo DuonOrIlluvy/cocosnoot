@@ -1,5 +1,5 @@
 #include "civic.h"
-
+// Syntax error due to variable name starting with -
 void foo(int[n, -m] b) {}
 
 export int main() {

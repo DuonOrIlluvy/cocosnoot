@@ -3,6 +3,7 @@
 #include "civic.h"
 
 export int main() {
+    // error: Integer out of range
     int a = 10000000000000000000;
     return 0;
 }

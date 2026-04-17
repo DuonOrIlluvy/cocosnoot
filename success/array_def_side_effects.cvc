@@ -1,3 +1,4 @@
+// Expected output: 1
 #include "civic.h"
 
 int rv = 0;

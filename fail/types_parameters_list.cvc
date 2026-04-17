@@ -6,6 +6,8 @@ int kaas(int a, int b, bool c, float d, int e) {
 
 export int main() {
     int a = 0;
+    // error: Wrong parameter type in function call, expected float but got int
     kaas(5, 1, false, 7, 8);
+    //                ^
     return 0;
 }

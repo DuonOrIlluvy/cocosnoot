@@ -4,6 +4,9 @@
 # reference compiler.
 CHECK_OUTPUT=true
 
+# If this is set to true, output every file name used for testing and its result (also when successful).
+VERBOSE=false
+
 # Fill in your compiler command here.
 COMPILER=civcc
 
@@ -35,35 +38,53 @@ command -v $COMPILER >/dev/null 2>&1 || { echo "$COMPILER is not an executable f
 echo "Running failure tests..."
 for x in fail/*.cvc; do
     TOTAL=$((TOTAL+1))
-    $COMPILER $x 1>/dev/null 2>/dev/null && {
-        echo "Test $x should not succeed!";
+    [[ $VERBOSE = true ]] && echo -n "    Running $x: "
+    if $COMPILER $x 1>/dev/null 2>/dev/null; then 
+        [[ $VERBOSE = false ]] && echo -n "    The test $x: ";
+        echo -e "\033[1m\033[31mShould not compile!\033[0m";
         FAIL=$((FAIL+1));
-    }
+    else
+        [[ $VERBOSE = true ]] && echo -e "\033[1m\033[92mFailed\033[0m";
+    fi
 done
 
 echo "Running runtime failure tests..."
 for x in runtime/*.cvc; do
     TOTAL=$((TOTAL+1))
-    $COMPILER $x 1>/dev/null 2>/dev/null && execute $COMPILER usr $x >/dev/null && {
-        echo "Test $x should not run!";
+    [[ $VERBOSE = true ]] && echo -n "    Running $x: "
+    if ($COMPILER $x 1>/dev/null 2>/dev/null && execute $COMPILER usr $x >/dev/null;) then
+        [[ $VERBOSE = false ]] && echo -n "    The test $x: "
+        echo -e "\033[1m\033[31mShould not run!\033[0m";
         FAIL=$((FAIL+1));
-    }
+    else
+        [[ $VERBOSE = true ]] && echo -e "\033[1m\033[92mFailed\033[0m";
+    fi
 done
 
 echo "Running success tests..."
 for x in success/*.cvc; do
     TOTAL=$((TOTAL+1))
-    $COMPILER $x 1>/dev/null 2>/dev/null || {
-        echo "Test $x should not fail!";
+    [[ $VERBOSE = true ]] && echo -n "    Running $x: ";
+    if $COMPILER $x 1>/dev/null 2>/dev/null; then
+        if [ $CHECK_OUTPUT = true ]; then
+            if diff <(execute $REFERENCE_COMPILER ref $x) \
+                <(execute $COMPILER usr $x) > /dev/null \
+                ; then
+                    [[ $VERBOSE = true ]] && echo -e "\033[1m\033[92mSuccess\033[0m";
+                else
+                    [[ $VERBOSE = false ]] && echo -n "    The test $x: "
+                    echo -e "\033[1m\033[31mOutput does not match the reference output!\033[0m"; FAIL=$((FAIL+1));
+            fi
+        else
+            [[ $VERBOSE = true ]] && echo -e "\033[1m\033[92mSuccess\033[0m";
+        fi
+    else 
+        [[ $VERBOSE = false ]] && echo -n "    The test $x: "
+        echo -e "\033[1m\033[31mFailed to run!\033[0m";
         FAIL=$((FAIL+1));
         continue;
-    }
-
-    if [ $CHECK_OUTPUT = true ]; then
-        diff <(execute $REFERENCE_COMPILER ref $x) \
-             <(execute $COMPILER usr $x) > /dev/null \
-             || { echo "Test $x did not match reference output!"; FAIL=$((FAIL+1)); }
     fi
+
 done
 
 if [ $TOTAL -eq 0 ]; then echo "No tests were run. Make sure you are in the right directory."; exit 1; fi

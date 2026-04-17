@@ -1,6 +1,8 @@
 #include "civic.h"
 
 export int main() {
+    // Exception: invalid bound size in array creation (offset 21)
+    // This could also be a parser error
     int[4, 0, 4] array_not_found;
     return 0;
 }

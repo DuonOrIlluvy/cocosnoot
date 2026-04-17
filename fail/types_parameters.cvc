@@ -8,6 +8,7 @@ int kaas(int a) {
 
 export int main() {
     int a = 0;
+    // error: Wrong parameter type in function call, expected int but got float
     kaas(5.0 * 6.0);
     return 0;
 }

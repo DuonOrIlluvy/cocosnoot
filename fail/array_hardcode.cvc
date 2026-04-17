@@ -5,6 +5,7 @@ void foo(int[n] a) {
 }
 
 export int main() {
+	// Syntax error!
 	foo([0, 1, 2]);
 
 	return 0;

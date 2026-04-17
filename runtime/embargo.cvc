@@ -1,7 +1,7 @@
 // Should produce an error in the VM because no main is exported.
 
 #include "civic.h"
-
+// error: function 'main' does not exist or has an incompatible signature
 int main() {
     return 0;
 }

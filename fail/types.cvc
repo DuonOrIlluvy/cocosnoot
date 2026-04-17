@@ -4,6 +4,7 @@
 
 export int main() {
     int a = 0;
+    // error: Wrong assignment type, expected int but got float
     a = 7.0;
     return 0;
 }

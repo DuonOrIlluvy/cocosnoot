@@ -1,3 +1,4 @@
+// Expected output: 10
 #include "civic.h"
 
 int foo() {

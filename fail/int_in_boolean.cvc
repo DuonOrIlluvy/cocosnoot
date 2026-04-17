@@ -1,5 +1,9 @@
 export int main() {
     bool[6] a = true;
+    // error: Left and right operand of binary operator have non matching types,
+    // left operand has type bool and right operand has type int
+    // error: only bool operands are allowed for && and ||, left operand has type
+    // bool and right operand has type int
     if (false && 5 && false) {}
     return 0;
 }

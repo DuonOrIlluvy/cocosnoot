@@ -8,6 +8,8 @@ int kaas(int a) {
 
 export int main() {
     int a = 0;
+    // error: Left and right operand of binary operator have non matching types,
+    // left operand has type int and right operand has type float
     kaas(5 * 6.0);
     return 0;
 }

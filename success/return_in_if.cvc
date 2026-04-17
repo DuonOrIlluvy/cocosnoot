@@ -1,0 +1,9 @@
+// Reference compiler will parse this since both if and else ends in return.
+// Expected output: (Nothing)
+export int main() {
+    if (true) {
+        return 0;
+    } else {
+        return 1;
+    }
+}

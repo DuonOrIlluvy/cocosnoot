@@ -5,7 +5,7 @@
  * @brief  This file finds the factorial of a number in Civilised C using
  *         relatively free variables.
  */
-
+// Expected output: 3628800
 #include "civic.h"
 
 export int main() {

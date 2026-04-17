@@ -1,3 +1,4 @@
+// Expected output: (Nothing)
 int foo() {
     return 5;
 }

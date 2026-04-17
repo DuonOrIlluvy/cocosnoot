@@ -1,0 +1,39 @@
+/*
+ * @file   for_eval_sideeffects.cvc
+ *
+ * @brief  Modified version of one of the course's hidden test suite.
+ * This failed on my compiler because I handled side effects on a for-statement incorrectly.
+ * Do not make the same mistake: all expressions (init, end, step) are evaluated exactly once!
+ */
+// Expected output: 0000
+#include "civic.h"
+
+int g = -1;
+int h = -1;
+int k = -1;
+
+int one_with_side_effect() {
+    g = g + 1;
+    return 1;
+}
+int zero_with_side_effect() {
+    h = h + 1;
+    return 0;
+}
+int ten_with_side_effect() {
+    k = k + 1;
+    return 10;
+}
+
+export int main() {
+    int x;
+    x = 10;
+    for (int i = zero_with_side_effect(), ten_with_side_effect(), one_with_side_effect()) {
+        x = x - 1;
+    }
+    printInt(x);
+    printInt(g);
+    printInt(h);
+    printInt(k);
+    return x + g + h + k;
+}

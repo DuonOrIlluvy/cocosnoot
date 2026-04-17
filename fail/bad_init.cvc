@@ -3,6 +3,7 @@
 #include "civic.h"
 
 export int main() {
+    // error: Wrong assignment type, expected float but got int
     float a = 0;
     return 0;
 }

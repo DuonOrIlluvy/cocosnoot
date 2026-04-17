@@ -3,8 +3,10 @@
 int fun(int a) {
 
     if (a > 5) {
+        // error: Wrong return type, expected int but got float
         return 5.0;
     } else {
+        // error: Wrong return type, expected int but got float
         return 8.0;
     }
 

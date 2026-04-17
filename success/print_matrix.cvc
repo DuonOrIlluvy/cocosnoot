@@ -3,7 +3,15 @@
  * @author Martha Szygula (10537988) and Stephen Swatman (10559442)
  *
  * @brief  This file prints a matrix. The matrix is predefined.
+ *
+ * Expected output:
+	0.500000 1.500000 2.500000 
+	1.500000 2.500000 3.500000 
+	2.500000 3.500000 4.500000 
+	3.500000 4.500000 5.500000 
+	4.500000 5.500000 6.500000
  */
+
 
 #include "civic.h"
 

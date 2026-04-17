@@ -1,3 +1,4 @@
+// Expected output: (Nothing)
 void foo() {}
 
 export int main() {

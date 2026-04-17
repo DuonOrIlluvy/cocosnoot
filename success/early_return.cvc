@@ -1,3 +1,4 @@
+// Expected output: 5
 #include "civic.h"
 
 export int main() {

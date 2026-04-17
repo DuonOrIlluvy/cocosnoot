@@ -1,0 +1,8 @@
+extern int a;
+// error: Variable 'a' is already declared
+extern int[a] b;
+//         ^
+
+export int main() {
+    return 0;
+}

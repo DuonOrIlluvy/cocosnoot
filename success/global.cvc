@@ -1,3 +1,4 @@
+// Expected output: 6
 #include "civic.h"
 
 int a = 5;

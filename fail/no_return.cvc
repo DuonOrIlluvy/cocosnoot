@@ -1,7 +1,7 @@
 // Should produce an error because fun must return something.
 
 #include "civic.h"
-
+// error: Function fun has not returned and is non-void function
 int fun() {
     int v = 5;
 }

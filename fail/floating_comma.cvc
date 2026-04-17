@@ -1,3 +1,4 @@
+// Syntax error!
 void (5, 6,) {}
 
 export int main() {

@@ -4,6 +4,8 @@
 
 export int main() {
     int a = 5;
+    // error: Left and right operand of binary operator have non matching types,
+    // left operand has type float and right operand has type int
     if (6.0 > a) {
         a = 6;
     }

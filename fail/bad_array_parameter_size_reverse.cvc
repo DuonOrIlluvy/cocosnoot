@@ -21,9 +21,12 @@ void print_matrix(float[n, m] matrix) {
 
 export int main() {
 	float[5, 3, 7] matrix;
-
+	// error: Expecting array of 2 dimensions, but got array of 3 dimensions
 	fill_matrix(matrix);
+	//          ^~~~~~
+	// error: Expecting array of 2 dimensions, but got array of 3 dimensions
 	print_matrix(matrix);
+	//           ^~~~~~
 
 	return 0;
 }

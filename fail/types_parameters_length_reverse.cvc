@@ -6,6 +6,7 @@ int kaas(int a, int b, bool c, float d) {
 
 export int main() {
     int a = 0;
+    // error: Function 'kaas' has incorrect parameter count (expected 5 but got 4)
     kaas(5, 1, false, 7.0, 8);
     return 0;
 }

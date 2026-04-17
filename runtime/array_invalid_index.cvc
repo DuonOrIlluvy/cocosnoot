@@ -4,5 +4,6 @@
 
 export int main() {
     int[4] a = 0;
+    // Exception: array index out of bounds (offset 51)
     return a[4];
 }

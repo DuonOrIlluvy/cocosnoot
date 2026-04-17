@@ -3,6 +3,8 @@
 export int main() {
 	int a = 5;
     int b;
+    // +=, -=, *=, /= and %= are all implemented in the reference compiler for some reason.
+    // I mean, I'm sure you won't get any penalty for implementing them (and other extras)...
 	a += 7 * (((b - b) * 56) + 5);
     a++;
     a--;

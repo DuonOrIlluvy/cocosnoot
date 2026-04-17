@@ -7,7 +7,7 @@ export int main() {
 	int b = 320;
 
 	void gcd() {}
-
+    // error: Variable 'gcd' is already declared
     void gcd() {
         gcd();
     }

@@ -4,7 +4,7 @@
  *
  * @brief  This file finds the factorial of a number in Civilised C.
  */
-
+// Expected output: 3628800
 #include "civic.h"
 
 int factorial(int a) {

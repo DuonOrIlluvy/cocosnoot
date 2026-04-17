@@ -2,6 +2,9 @@
 
 export int main() {
     int a = 5;
+    // Syntax error! ... unless you implement C99 style syntax:
+    // "if you consider this to be too much 20th century, feel free to
+    // support statements and declarations in any order, just as C does since the C99 standard."
     a = 6;
     int b = 7;
     return 0;

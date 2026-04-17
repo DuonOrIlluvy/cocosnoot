@@ -3,6 +3,9 @@
 #include "civic.h"
 
 export int main() {
+    // The condition expression inside this if-statements is parsed by the reference compiler
+    // as true. This is a bug of the reference compiler because the language manual says
+    // "The remaining four relational operators are only defined for integer and floating point numbers as operand values."
     if (true > false) {}
     return 0;
 }

@@ -1,3 +1,4 @@
+// Expected output: 1234567
 #include "civic.h"
 
 

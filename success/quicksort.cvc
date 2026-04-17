@@ -4,6 +4,10 @@
  *
  * @brief  This file implements quicksort on some predefined vectors in
  *         Civilised C.
+ *
+ * Expected output:
+	180 329 78 227 376 125 274 23 172 321 70 219 368 117 266 15 164 313 62 211 
+	15 23 62 70 78 117 125 164 172 180 211 219 227 266 274 313 321 329 368 376
  */
 
 #include "civic.h"

@@ -1,4 +1,4 @@
-// Comparisons don't work on booleans, except for ==.
+// Expected output: 535535535
 
 #include "civic.h"
 

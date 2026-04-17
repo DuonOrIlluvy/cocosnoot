@@ -3,6 +3,8 @@
 #include "civic.h"
 
 export int main() {
+    // error: only bool operands are allowed for && and ||, left operand has type
+    // int and right operand has type int
     if (4 && 7) {}
     return 0;
 }

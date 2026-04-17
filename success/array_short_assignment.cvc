@@ -1,4 +1,4 @@
-// Should produce a parser error because a comma is missing.
+// Expected output: 0
 
 #include "civic.h"
 

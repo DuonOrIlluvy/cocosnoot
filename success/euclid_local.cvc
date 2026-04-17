@@ -5,7 +5,7 @@
  * @brief  This file implements Euclids algorithm in the Civilised C programming
  *         language using relatively free variables.
  */
-
+// Expected output: 80\n
 #include "civic.h"
 
 export int main() {

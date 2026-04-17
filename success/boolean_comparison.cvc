@@ -1,5 +1,4 @@
-// Comparisons don't work on booleans, except for ==.
-
+// Expected output: (Nothing)
 #include "civic.h"
 
 export int main() {

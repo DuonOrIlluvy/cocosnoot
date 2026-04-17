@@ -1,4 +1,4 @@
-// Should produce a parser error due to the double comma.
+// Should produce a syntax error due to the double comma.
 
 #include "civic.h"
 

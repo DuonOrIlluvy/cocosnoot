@@ -5,7 +5,7 @@
  * @brief  This file implements Euclids algorithm in the Civilised C programming
  *         language.
  */
-
+// Expected output: 80\n
 #include "civic.h"
 
 int gcd(int a, int b) {
